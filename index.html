@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <!--Typical HTML document structure-->
+    <!--This title is for the top of the tab. Not to be confused with the title in the body-->
+    <head>
+        <title>Ishana D.</title>
+    </head>
+
+    <style>
+        /* Reset some default styles */
+        body, h1, p, button {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* Set the font and background properties for the whole page */
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(255, 232, 236); 
+            color: #333;
+            line-height: 1.6;
+        }
+    
+        .main {
+            max-width: 1200px;
+            height: auto;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+    
+        #title {
+            text-align: center;
+            padding: 20px;
+        }
+    
+        #title h1 {
+            font-size: 2.5em;
+            color: #ff8d8d; /* Soft red */
+        }
+    
+        #webpage {
+            display: flex;
+        }
+    
+        #navbar {
+            width: 20%;
+            background: #ff8d8d; /* Deep purple */
+            padding: 20px;
+            color: #fff;
+            border-radius: 12px 0 0 12px;
+        }
+    
+        .toc {
+            margin: 10px 0;
+        }
+    
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background: #fda6a6; /* Soft red */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+    
+        button:hover {
+            background: #ff8a8a; /* Lighter red */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    
+        #content {
+            width: 80%;
+            padding: 30px;
+            height: 400px;
+            overflow: auto;
+        }
+    
+        .content_page {
+            display: none;
+        }
+
+        a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        a:hover {
+            color: #333;
+        }
+    
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+    
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+    
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+    
+        th {
+            background: #f0f4f8;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 25%;
+            max-width: 25%;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 500) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 400) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+    
+    <script>
+        // This function makes the buttons functional. Not necessary to understand this code.
+        function makeVisible(div_id) {
+            console.log(`makeVisible ${div_id}`);
+            let divs = ['home', 'experience', 'ecs', 'photography'];
+            for (const d of divs) {
+                let doc = document.getElementById(d);
+                doc.style.display = (d == div_id) ? 'block' : 'none';
+            }
+        }
+
+       
+    </script>
+
+    <body>
+        <!--This is the main div. Where all the HTML text/content goes-->
+        <div class="main">
+            <!--This is the title at the top of the page.-->
+            <div id="title">
+                <h1>Ishana D.</h1>
+            </div>
+            <!--This is the rest of the webpage. Divided into two parts (navbar, content)-->
+            <div id="webpage">
+                <!--These are each of the buttons in the navbar on the left-->
+                <div id="navbar">
+                    <div class="toc">
+                        <!--When you  click on the button, it makes the element with id "home" visible-->
+                        <button onclick="makeVisible('home')">
+                            Home
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('experience')">
+                            Experience
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('ecs')">
+                            Activities
+                        </button>
+                    </div>
+                    <div class="toc">
+                        <button onclick="makeVisible('photography')">
+                            Photography
+                        </button>
+                    </div>
+                </div>
+                <!--This is the actual content, on the right side-->
+                <div id="content">
+                    <!--The home page is the default, so it doesn't have the "content_page" class.-->
+                    <div id="home">
+                        <h1>Home</h1>
+                        <p>
+                            As a CS major at Purdue University, I am passionate about leveraging technology to solve problems. My diverse experiences within technology, STEM, and my community have honed my skills in programming, problem solving, and teamwork. <br> <br>
+
+I learned to code for the first time before I was 10 years old, and since then I have only expanded my knowledge through various classes, personal projects, certifications, and even by teaching programming at a local Indian nonprofit school.<br> <br>
+
+In addition to technical skills, I have held leadership roles in various local communities and on a greater platform at American Legion Auxiliary Girls State. These opportunities have enhanced my public speaking, collaboration, and project management skills. <br> <br>
+
+I'm actively seeking experiences in software development, data science, research and development, etc. Feel free to check out my <a href="https://www.linkedin.com/in/ishana-d" target="_blank">Linkedin</a> to learn how I can be a valuable addition to your team and please reach out if you'd like to chat.
+                        
+                        </p>
+                           
+                    </div>
+                    <!--These are the other content pages. -->
+                    <!--The ID corresponds to the ID that the button is calling-->
+                    <div class="content_page" id="experience">
+                        <!--YOUR CODE GOES HERE-->
+                        <h1>Experience</h1>
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>Software Engineer, Head of Strategy</b><br>
+                                    <p>DiaBuddies * Jan 2024 - May 2024</p>
+                                    <p>DiaBuddies is the app designed by my Technovation team to help children and young adults manage diabetes. I was part of the app ideation process, programmed the health tracker feature of the app where users can track their glucose levels, and improved app appearance. I completed the market research, financial projections, strategy and implementation, etc. My role as the head of strategy was to author the company business plan, which is attached. Our team was selected as a Minnesota affiliate winner and a US Bank Challenge team, which gave us the opportunity to pitch our app the the US Bank Executive Board.</p>
+                                </td>
+                                <td><a href="business.pdf" target="_blank"><img src = "Images/diabuddies.png" width="200px"></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Math Instructor</b><br>
+                                    <p>Mathnasium * Jan 2024 - July 2024</p>
+                                    <p>I instructed students aged 4-18 on various math topics. I ensured that younger students grasped basic concepts such as fractions, counting money, missing addends, algebra, etc. I guided older students in mastering advanced skills such as trigonometry, precalculus, and calculus. In addition to being an instructor, I was also a personal motivator to each student and helped them develop a positive relationship with mathematics.</p>
+                                </td>
+                                <td><a href = "https://www.mathnasium.com/" target = "_blank"><img src = "Images/mathnasium.png" width = "200px"></a></td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <b>Python Teaching Assistant</b><br>
+                                    <p>Python 101/102 : Learn and Help * Sept 2022 - May 2024</p>
+                                    <p>Learn and Help is a program established by Dr. Siva Jasthi to teach programming globally and give back to the community. Students register for a programming class, and the fee they pay is used to set up libraries at schools in India. My role was as Dr. Jasthi's TA. I held weekly help sessions and graded assignments with feedback for 30+ students globally to prepare for the PCEP and PCAP exams. In 11th grade I worked with the Python 101 class, which was Python basics. In 12th grade I worked with the Python 102 class, which covered advanced topics such as modules, packages, pip, file handling, exception hierarchies, etc. The Learn and Help program funds established 60+ libraries in India.</p>
+                                </td>
+                                <td><a href = "https://learnandhelp.jasthi.com/" target = "_blank"><img src = "Images/learnAndHelp.jpg" width="200px"></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Web Development Teacher</b><br>
+                                    <p>School of India for Languages and Cultures * Sept 2021 - May 2024</p>
+                                    <p>I teach Year 1 of the 5-year Digital Literacy Program at SILC. The class covers HTML, CSS, and Javascript. I share my programming passion with 25+ 6th graders, plan and teach 30+ lessons per year, grade assignments, connect with students, and foster cultural projects for SILC expo competition. By the end of the class, students program a website about an Indian topic from start to finish. I contribute over 100 volunteer hours per school year to this class.</p>
+                                </td>
+                                <td><a href="https://sites.google.com/silcmn.com/silcminnesota" target="_blank"><img src = "Images/silc.jpg" width="200px"></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="content_page" id="ecs">
+                        <!--YOUR CODE GOES HERE-->
+                        <h1>Activities</h1>
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>Band President</b><br>
+                                    <p>Mahtomedi High School Bands * Sept 2022 - June 2024</p>
+                                    <p>Selected band president for two years in a row. I orchestrated community events for a band of 90+ players. I also initiated mentorship events between middle and high school musicians with 150+ participating students. I implemented and oversaw the 9th grade/new student mentorship program by leading monthly events. Other responsibilities included: running all leadership team meetings, giving speeches at each concert, helping set up and take down musical events, designing senior apparel, developing a one on one relationship with each member of the band, and assisting the director with anything else she needed.</p>
+                                </td>
+                                <td><a href="https://www.instagram.com/maht.band/" target="_blank"><img src="Images/mahtomedi.png" width="200px"></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Girls State Elected Official</b><br>
+                                    <p>American Legion Auxiliary * June 2023</p>
+                                    <p>Enhanced my public speaking skills and explored the power of rhetoric through impromptu speeches to gain the vote of my fellow citizens. I was elected city councilwoman, and nationalist party county and state caucus delegate. This week showed me the importance of democracy and introduced me to various government roles, from state troupers to district attorneys.</p>
+                                </td>
+                                <td><a href="https://www.legion-aux.org/ala-girls-state" target="_blank"><img src="Images/girlsState.png" width="200px"></a></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="content_page" id="photography">
+                        <h1>Travel Photography</h1>
+                        <div class="row">
+                            <div class="column">
+                                <img src="Images/Alaska.jpg">
+                                <img src="Images/Austin.jpg">
+                                <img src="Images/CC.jpg">
+                                <img src="Images/Chicago.jpg">
+                                <img src="Images/Disney.jpg">
+                                <img src="Images/Jamaica.jpg">
+                                <img src="Images/Lima.jpg">
+                            </div>
+                            <div class="column">
+                                <img src="Images/Lisboa.jpg">
+                                <img src="Images/London.jpg">
+                                <img src="Images/London2.jpg">
+                                <img src="Images/London3.jpg">
+                                <img src="Images/Mackinac.jpg">
+                                <img src="Images/Mackinac2.jpg">
+                                <img src="Images/Mackinac3.jpg">
+                            </div>
+                            <div class="column">
+                                <img src="Images/MP.jpg">
+                                <img src="Images/Peru.jpg">
+                                <img src="Images/Porto.jpg">
+                                <img src="Images/Porto2.jpg">
+                                <img src="Images/SanAntonio.jpg">
+                                <img src="Images/Scotland.jpg">
+                                <img src="Images/Scotland2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
