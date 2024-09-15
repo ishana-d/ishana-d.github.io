@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <!--Typical HTML document structure-->
-    <!--This title is for the top of the tab. Not to be confused with the title in the body-->
     <head>
         <title>Ishana D.</title>
     </head>
 
     <style>
-        /* Reset some default styles */
+        /* Some default styles */
         body, h1, p, button {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
             padding: 0;
         }
     
-        /* Set the font and background properties for the whole page */
+        /* Some properties for the whole page */
         body {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
             background-color: rgb(208, 207, 170); 
             color: #333;
             line-height: 1.6;
@@ -46,6 +43,7 @@
             color: rgb(56, 47, 40);
         }
     
+        /* Key in making the table of contents next to the content */
         #webpage {
             display: flex;
         }
@@ -81,6 +79,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
     
+        /* Size of the content (80% on the right side - navbar is 20% on the left) */
         #content {
             width: 80%;
             padding: 30px;
@@ -88,6 +87,7 @@
             overflow: auto;
         }
     
+        /* Hide all the content besides home page */
         .content_page {
             display: none;
         }
@@ -102,6 +102,7 @@
             color: #333;
         }
     
+        /* Style the tables */
         table {
             width: 100%;
             margin: 20px 0;
@@ -121,39 +122,30 @@
             background: #f0f4f8;
         }
 
+        /* Make the image table a flexible box */
         .row {
             display: flex;
+            /* Wrap onto multiple lines if neeeded */
             flex-wrap: wrap;
         }
 
+        /* Image table: Each column takes up 25% of available width */
         .column {
             flex: 25%;
             max-width: 25%;
         }
 
+        /* Align each image properly */
         .column img {
             vertical-align: middle;
             width: 100%;
         }
 
-        @media screen and (max-width: 500) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-
-        @media screen and (max-width: 400) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
 
     </style>
     
     <script>
-        // This function makes the buttons functional. Not necessary to understand this code.
+        // This function makes the buttons functional. 
         function makeVisible(div_id) {
             console.log(`makeVisible ${div_id}`);
             let divs = ['home', 'experience', 'ecs', 'photography'];
@@ -162,8 +154,6 @@
                 doc.style.display = (d == div_id) ? 'block' : 'none';
             }
         }
-
-       
     </script>
 
     <body>
